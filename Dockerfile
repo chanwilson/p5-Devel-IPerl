@@ -31,6 +31,8 @@ ENV PATH="$PERL_PATH/bin:$PATH"
 RUN cpm install -L $PERL_PATH Devel::IPerl
 
 RUN cpm install -L $PERL_PATH PDL
+COPY perl-modules /tmp/perl-modules
+RUN cat /tmp/perl-modules | cpm install - -L $PERL_PATH
 
 RUN rm -fR /home/jovyan/.cpanm/work/* /home/jovyan/.perl-cpm
 
