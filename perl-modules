@@ -543,3 +543,4 @@ namespace::clean
 prefork
 strictures
 tainting
+Term::Animation
